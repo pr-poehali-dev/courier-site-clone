@@ -15,74 +15,134 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <nav className="container mx-auto px-6 py-4">
+      <header className="bg-primary text-secondary py-2">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <div className="font-heading font-bold text-2xl text-primary">
-              CourierJobs
+            <div className="font-heading font-bold text-2xl">
+              🍔 Яндекс Еда
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="font-body text-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="#jobs" className="font-body text-foreground hover:text-primary transition-colors">Вакансии</a>
-              <a href="#couriers" className="font-body text-foreground hover:text-primary transition-colors">Курьерам</a>
-              <a href="#partners" className="font-body text-foreground hover:text-primary transition-colors">Партнёрам</a>
-              <a href="#faq" className="font-body text-foreground hover:text-primary transition-colors">FAQ</a>
-              <a href="#contacts" className="font-body text-foreground hover:text-primary transition-colors">Контакты</a>
+            <div className="hidden md:flex items-center gap-6 text-sm">
+              <span className="flex items-center gap-2">
+                <Icon name="Phone" size={16} />
+                8 (800) 700-06-00
+              </span>
+              <span>Бесплатно по России</span>
             </div>
-            <Button variant="outline" className="md:hidden">
-              <Icon name="Menu" size={20} />
-            </Button>
           </div>
-        </nav>
+        </div>
       </header>
 
+      {/* Navigation */}
+      <nav className="bg-white border-b-2 border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="font-heading font-bold text-xl text-secondary">
+              Работа курьером
+            </div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#hero" className="font-body text-gray-700 hover:text-primary transition-colors font-medium">
+                Главная
+              </a>
+              <a href="#about" className="font-body text-gray-700 hover:text-primary transition-colors font-medium">
+                О работе
+              </a>
+              <a href="#requirements" className="font-body text-gray-700 hover:text-primary transition-colors font-medium">
+                Требования
+              </a>
+              <a href="#faq" className="font-body text-gray-700 hover:text-primary transition-colors font-medium">
+                Вопросы
+              </a>
+              <a href="#contacts" className="font-body text-gray-700 hover:text-primary transition-colors font-medium">
+                Контакты
+              </a>
+            </div>
+            <Button className="bg-primary text-secondary hover:bg-primary/90 font-bold px-6">
+              Стать курьером
+            </Button>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section id="home" className="bg-gradient-to-br from-primary via-primary to-secondary py-20">
+      <section id="hero" className="bg-gradient-to-r from-primary/10 via-primary/5 to-white py-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h1 className="font-heading text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Работа курьером 
-                <span className="block text-white/90">в сфере доставки еды</span>
+            <div>
+              <h1 className="font-heading text-4xl lg:text-6xl font-bold mb-6 text-secondary leading-tight">
+                Яндекс Еда
+                <span className="block text-primary">работа курьером</span>
               </h1>
-              <p className="font-body text-xl mb-8 text-white/90">
-                Зарабатывайте до 80 000 рублей в месяц, работая курьером в ведущих сервисах доставки. 
-                Гибкий график, ежедневные выплаты, поддержка 24/7.
+              <p className="font-body text-xl mb-8 text-gray-700 leading-relaxed">
+                Доход до <span className="font-bold text-primary">260 000 рублей в месяц</span>. 
+                Стань курьером в сервисе Яндекс Еда или Лавка и получай ежедневные выплаты!
               </p>
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2 text-white/90">
-                  <Icon name="CheckCircle" size={20} />
-                  <span className="font-body">Ежедневные выплаты</span>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <Icon name="Check" size={16} className="text-white" />
+                  </div>
+                  <span className="font-body text-lg">Ежедневные выплаты на карту</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/90">
-                  <Icon name="Clock" size={20} />
-                  <span className="font-body">Гибкий график</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <Icon name="Check" size={16} className="text-white" />
+                  </div>
+                  <span className="font-body text-lg">Гибкий график работы</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/90">
-                  <Icon name="Headphones" size={20} />
-                  <span className="font-body">Поддержка 24/7</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <Icon name="Check" size={16} className="text-white" />
+                  </div>
+                  <span className="font-body text-lg">Без опыта работы</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <Icon name="Check" size={16} className="text-white" />
+                  </div>
+                  <span className="font-body text-lg">Предоставляем форму и оборудование</span>
                 </div>
               </div>
+
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-secondary font-bold px-8 py-4 text-xl"
+              >
+                Подать заявку на работу
+                <Icon name="ArrowRight" size={20} className="ml-2" />
+              </Button>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="font-heading text-2xl font-semibold mb-6 text-foreground">
-                Быстрая регистрация курьера
+            <div className="bg-white rounded-2xl p-8 shadow-2xl border">
+              <h3 className="font-heading text-2xl font-bold mb-6 text-secondary">
+                Заявка на работу курьером
               </h3>
+              <p className="font-body text-gray-600 mb-6">
+                Заполните форму, и мы свяжемся с вами в течение 24 часов
+              </p>
+              
               <form className="space-y-4">
                 <div>
-                  <Label htmlFor="name">Ваше имя</Label>
-                  <Input id="name" placeholder="Введите ваше имя" />
+                  <Label htmlFor="name">Имя и фамилия</Label>
+                  <Input 
+                    id="name" 
+                    placeholder="Введите ваше имя и фамилию"
+                    className="h-12" 
+                  />
                 </div>
                 <div>
-                  <Label htmlFor="phone">Номер телефона</Label>
-                  <Input id="phone" placeholder="+7 (999) 123-45-67" />
+                  <Label htmlFor="phone">Телефон</Label>
+                  <Input 
+                    id="phone" 
+                    placeholder="+7 (999) 123-45-67"
+                    className="h-12" 
+                  />
                 </div>
                 <div>
                   <Label htmlFor="city">Город</Label>
                   <Select value={selectedCity} onValueChange={setSelectedCity}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Выберите город" />
+                    <SelectTrigger className="h-12">
+                      <SelectValue placeholder="Выберите ваш город" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="moscow">Москва</SelectItem>
@@ -90,13 +150,18 @@ const Index = () => {
                       <SelectItem value="ekb">Екатеринбург</SelectItem>
                       <SelectItem value="nsk">Новосибирск</SelectItem>
                       <SelectItem value="kzn">Казань</SelectItem>
+                      <SelectItem value="nnn">Нижний Новгород</SelectItem>
+                      <SelectItem value="chel">Челябинск</SelectItem>
+                      <SelectItem value="omsk">Омск</SelectItem>
+                      <SelectItem value="samara">Самара</SelectItem>
+                      <SelectItem value="rostov">Ростов-на-Дону</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
                   <Label htmlFor="transport">Транспорт</Label>
                   <Select>
-                    <SelectTrigger>
+                    <SelectTrigger className="h-12">
                       <SelectValue placeholder="Способ передвижения" />
                     </SelectTrigger>
                     <SelectContent>
@@ -107,108 +172,119 @@ const Index = () => {
                     </SelectContent>
                   </Select>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-body font-medium py-3">
-                  Начать работу курьером
+                <Button className="w-full bg-primary hover:bg-primary/90 text-secondary font-bold py-4 h-12 text-lg">
+                  Отправить заявку
                 </Button>
+                
+                <p className="text-sm text-gray-500 text-center">
+                  Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                </p>
               </form>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
+      {/* About Section */}
+      <section id="about" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl font-bold mb-4 text-foreground">
-              Преимущества работы с нами
+            <h2 className="font-heading text-4xl font-bold mb-4 text-secondary">
+              Почему выбирают работу в Яндекс Еде?
             </h2>
-            <p className="font-body text-xl text-muted-foreground max-w-2xl mx-auto">
-              Мы предлагаем лучшие условия для курьеров в сфере доставки еды
+            <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
+              Яндекс.Еда — это лидер рынка доставки еды в России. 
+              Мы предлагаем стабильную работу с честными условиями и поддержкой.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Banknote" size={32} className="text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="DollarSign" size={40} className="text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl">Высокий доход</CardTitle>
+                <CardTitle className="font-heading text-2xl text-secondary">Высокий доход</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="font-body text-base">
-                  Зарабатывайте до 80 000 ₽ в месяц с ежедневными выплатами и бонусами за активность
+                <CardDescription className="font-body text-base text-gray-600 leading-relaxed">
+                  Зарабатывайте до <span className="font-bold text-primary">260 000 ₽</span> в месяц. 
+                  Ваш доход зависит от количества выполненных заказов и времени работы.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Calendar" size={32} className="text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Clock" size={40} className="text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl">Гибкий график</CardTitle>
+                <CardTitle className="font-heading text-2xl text-secondary">Ежедневные выплаты</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="font-body text-base">
-                  Работайте когда удобно — утром, днём или вечером. Полная свобода выбора смен
+                <CardDescription className="font-body text-base text-gray-600 leading-relaxed">
+                  Получайте заработанные деньги каждый день на вашу банковскую карту. 
+                  Никаких задержек и комиссий.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Shield" size={32} className="text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Calendar" size={40} className="text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl">Страхование</CardTitle>
+                <CardTitle className="font-heading text-2xl text-secondary">Гибкий график</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="font-body text-base">
-                  Полное страхование курьера и транспорта на весь период работы
+                <CardDescription className="font-body text-base text-gray-600 leading-relaxed">
+                  Работайте когда хотите: утром, днём, вечером или ночью. 
+                  Вы сами планируете своё время.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="MapPin" size={32} className="text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Users" size={40} className="text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl">Выбор района</CardTitle>
+                <CardTitle className="font-heading text-2xl text-secondary">Без опыта</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="font-body text-base">
-                  Работайте в удобном для вас районе города — мы найдём заказы рядом с домом
+                <CardDescription className="font-body text-base text-gray-600 leading-relaxed">
+                  Опыт работы курьером не требуется. Мы обучим всему необходимому 
+                  и поможем начать зарабатывать с первого дня.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Smartphone" size={32} className="text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Shield" size={40} className="text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl">Удобное приложение</CardTitle>
+                <CardTitle className="font-heading text-2xl text-secondary">Страхование</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="font-body text-base">
-                  Интуитивное мобильное приложение с навигацией и всей необходимой информацией
+                <CardDescription className="font-body text-base text-gray-600 leading-relaxed">
+                  Полная страховка от несчастных случаев на весь период работы. 
+                  Ваша безопасность — наш приоритет.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Users" size={32} className="text-primary" />
+            <Card className="bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Headphones" size={40} className="text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl">Команда поддержки</CardTitle>
+                <CardTitle className="font-heading text-2xl text-secondary">Поддержка 24/7</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="font-body text-base">
-                  Круглосуточная поддержка курьеров — решаем любые вопросы быстро и эффективно
+                <CardDescription className="font-body text-base text-gray-600 leading-relaxed">
+                  Наша служба поддержки работает круглосуточно. 
+                  Поможем решить любые вопросы в рабочем процессе.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -216,178 +292,212 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Job Vacancies Section */}
-      <section id="jobs" className="py-16 bg-white">
-        <div className="container mx-auto px-6">
+      {/* Requirements Section */}
+      <section id="requirements" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl font-bold mb-4 text-foreground">
-              Актуальные вакансии
+            <h2 className="font-heading text-4xl font-bold mb-4 text-secondary">
+              Требования к курьерам
             </h2>
-            <p className="font-body text-xl text-muted-foreground">
-              Выберите подходящую вакансию в вашем городе
+            <p className="font-body text-xl text-gray-600">
+              Простые требования для начала работы курьером
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Job Cards */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="font-heading text-lg">Курьер на скутере</CardTitle>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800">Активно</Badge>
-                </div>
-                <CardDescription className="font-body">Москва • Полный день</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Banknote" size={16} className="text-primary" />
-                    <span className="font-body text-sm">60 000 - 80 000 ₽</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="User" size={20} className="text-secondary" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Clock" size={16} className="text-primary" />
-                    <span className="font-body text-sm">Гибкий график</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="MapPin" size={16} className="text-primary" />
-                    <span className="font-body text-sm">Центральный район</span>
+                  <div>
+                    <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                      Возраст от 18 лет
+                    </h3>
+                    <p className="font-body text-gray-600">
+                      Мы принимаем на работу совершеннолетних граждан РФ
+                    </p>
                   </div>
                 </div>
-                <Button className="w-full mt-4" variant="outline">
-                  Подробнее
-                </Button>
-              </CardContent>
-            </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="font-heading text-lg">Курьер на велосипеде</CardTitle>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800">Активно</Badge>
-                </div>
-                <CardDescription className="font-body">Санкт-Петербург • Частичная занятость</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Banknote" size={16} className="text-primary" />
-                    <span className="font-body text-sm">40 000 - 60 000 ₽</span>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="FileText" size={20} className="text-secondary" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Clock" size={16} className="text-primary" />
-                    <span className="font-body text-sm">4-8 часов в день</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="MapPin" size={16} className="text-primary" />
-                    <span className="font-body text-sm">Невский район</span>
+                  <div>
+                    <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                      Документы
+                    </h3>
+                    <p className="font-body text-gray-600">
+                      Паспорт РФ, справка об отсутствии судимости, медицинская книжка (при необходимости)
+                    </p>
                   </div>
                 </div>
-                <Button className="w-full mt-4" variant="outline">
-                  Подробнее
-                </Button>
-              </CardContent>
-            </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="font-heading text-lg">Курьер на автомобиле</CardTitle>
-                  <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">Срочно</Badge>
-                </div>
-                <CardDescription className="font-body">Екатеринбург • Полный день</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Banknote" size={16} className="text-primary" />
-                    <span className="font-body text-sm">70 000 - 90 000 ₽</span>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="Smartphone" size={20} className="text-secondary" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Clock" size={16} className="text-primary" />
-                    <span className="font-body text-sm">8-12 часов в день</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="MapPin" size={16} className="text-primary" />
-                    <span className="font-body text-sm">Весь город</span>
+                  <div>
+                    <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                      Смартфон с интернетом
+                    </h3>
+                    <p className="font-body text-gray-600">
+                      Android или iOS с доступом в интернет для работы с мобильным приложением
+                    </p>
                   </div>
                 </div>
-                <Button className="w-full mt-4" variant="outline">
-                  Подробнее
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
 
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Посмотреть все вакансии
-              <Icon name="ArrowRight" size={16} className="ml-2" />
-            </Button>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Icon name="Car" size={20} className="text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                      Транспорт
+                    </h3>
+                    <p className="font-body text-gray-600">
+                      Велосипед, скутер, автомобиль или работа пешком. 
+                      Водительские права для скутера/авто.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
+                <h3 className="font-heading text-xl font-semibold mb-3 text-secondary">
+                  Дополнительные бонусы:
+                </h3>
+                <ul className="space-y-2 font-body text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-green-500" />
+                    Предоставляем термосумку и форму
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-green-500" />
+                    Компенсация ГСМ для автомобилистов
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-green-500" />
+                    Премии за высокие рейтинги
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8">
+              <h3 className="font-heading text-2xl font-bold mb-6 text-secondary">
+                Начните зарабатывать уже сегодня!
+              </h3>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-primary text-secondary rounded-full flex items-center justify-center font-bold">
+                    1
+                  </div>
+                  <span className="font-body">Подайте заявку на сайте</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-primary text-secondary rounded-full flex items-center justify-center font-bold">
+                    2
+                  </div>
+                  <span className="font-body">Пройдите регистрацию в офисе</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-primary text-secondary rounded-full flex items-center justify-center font-bold">
+                    3
+                  </div>
+                  <span className="font-body">Получите оборудование и начинайте работать</span>
+                </div>
+              </div>
+              <Button 
+                size="lg" 
+                className="w-full bg-primary hover:bg-primary/90 text-secondary font-bold py-4"
+              >
+                Подать заявку сейчас
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section id="faq" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl font-bold mb-4 text-foreground">
+            <h2 className="font-heading text-4xl font-bold mb-4 text-secondary">
               Часто задаваемые вопросы
             </h2>
-            <p className="font-body text-xl text-muted-foreground">
-              Ответы на популярные вопросы о работе курьером
+            <p className="font-body text-xl text-gray-600">
+              Ответы на самые популярные вопросы о работе курьером
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="item-1" className="bg-white rounded-lg px-6">
-                <AccordionTrigger className="font-heading text-left">
-                  Какие документы нужны для работы курьером?
+              <AccordionItem value="item-1" className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 font-heading text-left text-lg font-semibold hover:no-underline">
+                  Сколько можно заработать курьером в Яндекс Еде?
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-muted-foreground">
-                  Для работы курьером необходимы: паспорт РФ, водительские права (для скутера/автомобиля), 
-                  справка об отсутствии судимости, медицинская справка. Все документы можно загрузить через наше приложение.
+                <AccordionContent className="px-6 pb-4 font-body text-gray-600">
+                  Доход курьера зависит от количества выполненных заказов, времени работы и города. 
+                  В среднем курьеры зарабатывают от 80 000 до 260 000 рублей в месяц. 
+                  Наиболее активные курьеры в крупных городах могут зарабатывать и больше.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="bg-white rounded-lg px-6">
-                <AccordionTrigger className="font-heading text-left">
+              <AccordionItem value="item-2" className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 font-heading text-left text-lg font-semibold hover:no-underline">
                   Как происходят выплаты?
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-muted-foreground">
-                  Выплаты производятся ежедневно на банковскую карту или электронный кошелек. 
-                  Минимальная сумма для вывода — 500 рублей. Комиссия за перевод не взимается.
+                <AccordionContent className="px-6 pb-4 font-body text-gray-600">
+                  Выплаты производятся ежедневно автоматически на привязанную банковскую карту. 
+                  Деньги поступают в течение нескольких часов после окончания рабочего дня. 
+                  Комиссия за перевод не взимается.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="bg-white rounded-lg px-6">
-                <AccordionTrigger className="font-heading text-left">
-                  Можно ли работать без опыта?
+              <AccordionItem value="item-3" className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 font-heading text-left text-lg font-semibold hover:no-underline">
+                  Какой график работы у курьеров?
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-muted-foreground">
-                  Да, опыт работы курьером не требуется. Мы проводим обучение для всех новых сотрудников, 
-                  объясняем работу с приложением и особенности доставки в вашем городе.
+                <AccordionContent className="px-6 pb-4 font-body text-gray-600">
+                  График работы полностью гибкий. Вы можете работать в любое время: 
+                  утром с 8:00, днём с 12:00, вечером с 18:00 или ночью с 22:00. 
+                  Можете выбрать любое количество часов - от 2 до 12 часов в день.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="bg-white rounded-lg px-6">
-                <AccordionTrigger className="font-heading text-left">
+              <AccordionItem value="item-4" className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 font-heading text-left text-lg font-semibold hover:no-underline">
+                  Нужен ли опыт работы курьером?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 font-body text-gray-600">
+                  Нет, опыт работы курьером не требуется. Мы проведём полное обучение: 
+                  расскажем как пользоваться приложением, объясним особенности работы, 
+                  покажем лучшие маршруты в вашем городе.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 font-heading text-left text-lg font-semibold hover:no-underline">
                   Предоставляете ли вы транспорт?
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-muted-foreground">
-                  В некоторых городах мы предлагаем аренду скутеров и велосипедов на выгодных условиях. 
-                  Также можете использовать собственный транспорт — мы предоставим страховку и компенсацию за ГСМ.
+                <AccordionContent className="px-6 pb-4 font-body text-gray-600">
+                  В некоторых городах мы предлагаем аренду скутеров на выгодных условиях. 
+                  Также вы можете работать на собственном транспорте: велосипеде, скутере, 
+                  автомобиле или пешком. Для автомобилистов предусмотрена компенсация ГСМ.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="bg-white rounded-lg px-6">
-                <AccordionTrigger className="font-heading text-left">
-                  Какой график работы?
+              <AccordionItem value="item-6" className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 font-heading text-left text-lg font-semibold hover:no-underline">
+                  Что нужно для начала работы?
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-muted-foreground">
-                  График работы полностью гибкий — вы сами выбираете дни и часы работы. 
-                  Можете работать полный день, несколько часов в день или только в выходные. Никаких обязательств.
+                <AccordionContent className="px-6 pb-4 font-body text-gray-600">
+                  Для начала работы нужно: быть гражданином РФ от 18 лет, иметь смартфон с интернетом, 
+                  предоставить необходимые документы (паспорт, справку об отсутствии судимости), 
+                  пройти регистрацию в офисе и получить оборудование.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -395,91 +505,81 @@ const Index = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-heading text-4xl font-bold mb-6 text-secondary">
+            Готовы начать зарабатывать?
+          </h2>
+          <p className="font-body text-xl mb-8 text-secondary/90 max-w-2xl mx-auto">
+            Присоединяйтесь к команде Яндекс.Еда уже сегодня и начните получать стабильный доход
+          </p>
+          <Button 
+            size="lg" 
+            className="bg-secondary hover:bg-secondary/90 text-white font-bold px-12 py-4 text-xl"
+          >
+            Стать курьером Яндекс.Еда
+            <Icon name="ArrowRight" size={24} className="ml-2" />
+          </Button>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contacts" className="py-16 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl font-bold mb-4 text-foreground">
-              Свяжитесь с нами
+            <h2 className="font-heading text-4xl font-bold mb-4 text-secondary">
+              Контакты для связи
             </h2>
-            <p className="font-body text-xl text-muted-foreground">
-              Есть вопросы? Мы всегда готовы помочь
+            <p className="font-body text-xl text-gray-600">
+              Свяжитесь с нами любым удобным способом
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div>
-              <h3 className="font-heading text-2xl font-semibold mb-6 text-foreground">
-                Контактная информация
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="Phone" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-body font-medium text-foreground">Телефон поддержки</p>
-                    <p className="font-body text-muted-foreground">8 (800) 555-0123</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="Mail" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-body font-medium text-foreground">Email</p>
-                    <p className="font-body text-muted-foreground">support@courierjobs.ru</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="MapPin" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-body font-medium text-foreground">Офис</p>
-                    <p className="font-body text-muted-foreground">г. Москва, ул. Тверская, 15</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="Clock" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-body font-medium text-foreground">Время работы</p>
-                    <p className="font-body text-muted-foreground">Круглосуточно</p>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Card className="text-center p-8 bg-gray-50 border-0">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Phone" size={32} className="text-primary" />
               </div>
-            </div>
-
-            <Card className="p-8">
-              <h3 className="font-heading text-2xl font-semibold mb-6 text-foreground">
-                Напишите нам
+              <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                Телефон
               </h3>
-              <form className="space-y-4">
-                <div>
-                  <Label htmlFor="contact-name">Имя</Label>
-                  <Input id="contact-name" placeholder="Ваше имя" />
-                </div>
-                <div>
-                  <Label htmlFor="contact-email">Email</Label>
-                  <Input id="contact-email" type="email" placeholder="your@email.com" />
-                </div>
-                <div>
-                  <Label htmlFor="contact-phone">Телефон</Label>
-                  <Input id="contact-phone" placeholder="+7 (999) 123-45-67" />
-                </div>
-                <div>
-                  <Label htmlFor="message">Сообщение</Label>
-                  <Textarea id="message" placeholder="Ваше сообщение..." rows={4} />
-                </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Отправить сообщение
-                </Button>
-              </form>
+              <p className="font-body text-lg text-primary font-bold mb-2">
+                8 (800) 700-06-00
+              </p>
+              <p className="font-body text-sm text-gray-600">
+                Бесплатно по России
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-50 border-0">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Mail" size={32} className="text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                Email
+              </h3>
+              <p className="font-body text-lg text-primary font-bold mb-2">
+                work@yandex-eda.ru
+              </p>
+              <p className="font-body text-sm text-gray-600">
+                Ответим в течение часа
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-50 border-0">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Clock" size={32} className="text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">
+                Режим работы
+              </h3>
+              <p className="font-body text-lg text-secondary font-bold mb-2">
+                Круглосуточно
+              </p>
+              <p className="font-body text-sm text-gray-600">
+                7 дней в неделю
+              </p>
             </Card>
           </div>
         </div>
@@ -487,48 +587,55 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-secondary text-white py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-heading text-xl font-semibold mb-4">CourierJobs</h3>
-              <p className="font-body text-white/80">
-                Лучшие вакансии для курьеров в сфере доставки еды. 
-                Высокий доход, гибкий график, поддержка 24/7.
+              <h3 className="font-heading text-xl font-semibold mb-4">
+                🍔 Яндекс Еда
+              </h3>
+              <p className="font-body text-white/80 mb-4">
+                Работа курьером в крупнейшем сервисе доставки еды в России. 
+                Стабильный доход и честные условия.
+              </p>
+              <p className="font-body text-white/60 text-sm">
+                © 2024 Все права защищены
               </p>
             </div>
             
             <div>
-              <h3 className="font-heading text-lg font-semibold mb-4">Разделы</h3>
+              <h3 className="font-heading text-lg font-semibold mb-4">Информация</h3>
               <ul className="space-y-2 font-body text-white/80">
-                <li><a href="#home" className="hover:text-white transition-colors">Главная</a></li>
-                <li><a href="#jobs" className="hover:text-white transition-colors">Вакансии</a></li>
-                <li><a href="#couriers" className="hover:text-white transition-colors">Курьерам</a></li>
-                <li><a href="#partners" className="hover:text-white transition-colors">Партнёрам</a></li>
+                <li><a href="#about" className="hover:text-primary transition-colors">О работе</a></li>
+                <li><a href="#requirements" className="hover:text-primary transition-colors">Требования</a></li>
+                <li><a href="#faq" className="hover:text-primary transition-colors">Вопросы</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Условия работы</a></li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-heading text-lg font-semibold mb-4">Поддержка</h3>
               <ul className="space-y-2 font-body text-white/80">
-                <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#contacts" className="hover:text-white transition-colors">Контакты</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Помощь</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Правила</a></li>
+                <li><a href="#contacts" className="hover:text-primary transition-colors">Контакты</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Техподдержка</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Обучение</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Помощь курьерам</a></li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-heading text-lg font-semibold mb-4">Контакты</h3>
-              <div className="space-y-2 font-body text-white/80">
-                <p>8 (800) 555-0123</p>
-                <p>support@courierjobs.ru</p>
-                <div className="flex gap-4 mt-4">
-                  <Button variant="ghost" size="sm" className="text-white/80 hover:text-white p-2">
-                    <Icon name="MessageCircle" size={20} />
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-white/80 hover:text-white p-2">
-                    <Icon name="Phone" size={20} />
-                  </Button>
+              <div className="space-y-3 font-body text-white/80">
+                <div className="flex items-center gap-2">
+                  <Icon name="Phone" size={16} />
+                  <span>8 (800) 700-06-00</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="Mail" size={16} />
+                  <span>work@yandex-eda.ru</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="MapPin" size={16} />
+                  <span>Москва, Россия</span>
                 </div>
               </div>
             </div>
@@ -536,7 +643,8 @@ const Index = () => {
           
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="font-body text-white/60">
-              © 2024 CourierJobs. Все права защищены.
+              Сайт не является официальным сайтом Яндекс.Еда. 
+              Информация носит ознакомительный характер.
             </p>
           </div>
         </div>
